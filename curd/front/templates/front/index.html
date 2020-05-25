@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Crud Operation with Django</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Crud Operation with Django</h1>
+    <form name="testdata" action="#" method="POST">
+        {% csrf_token %}
+        Name: <input type="text" name="uname">
+        Email: <input type="email" name="uemail">
+        Phone No: <input type="number" name="unumber">
+        Upload Img: <input type="file" name="uimg">
+        <input type="submit" name="submit" value="Submit">
+    </form>
+<br/>
+<br/>
+<br/>
+    <fieldset>
+        <label>Data Details</label>
+        <table name="details" border="1px solid black">
+            <tbody>
+                <thead>
+                <tr>
+                    <td>S.No</td>
+                    <td>User Image</td>
+                    <td>User Name</td>
+                    <td>User Email</td>
+                    <td>User Number</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+                <tr>
+                    <td>1</td>
+                    <td><img src="/img/icon.jpg" width="150px" height="150px"></td>
+                    <td>Ramesh</td>
+                    <td>ramesh@worldhold.com</td>
+                    <td>+91-999999999</td>
+                    <td><a href="#"><button name='edit'>Edit</button></a> | <a href="#"><button name='delete'>Delete</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>
